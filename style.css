@@ -86,22 +86,30 @@ nav button{
     display:flex;
     gap:20px;
     padding:20px;
-    align-items:flex-start; /* مهم جدا */
+    align-items:flex-start;
+    flex-wrap:wrap; /* مهم جدا */
 }
 .product-img{
-    flex:1;
+    width:100%;
     display:flex;
     justify-content:center;
 }
 
 .product-img img{
     width:100%;
-    max-width:300px;
-    height:auto; /* دي اللي هتحل المشكلة */
+    max-width:220px;
+    height:auto;
+    margin:auto;
+}
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
 }
 
+.product-img,
 .product-info{
-    flex:1;
+    flex:1 1 100%; /* يخليهم ينزلوا تحت بعض */
 }
 
 .product-info button{
@@ -219,48 +227,34 @@ nav button{
 
 @media (max-width:768px){
 
-    /* الهيدر */
-    header{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    h1{
-        font-size:20px;
-    }
-
-    .search{
-        width:90%;
-        margin:10px auto;
-    }
-
-    /* المنتجات */
-    #products{
-        grid-template-columns: repeat(2,1fr);
-        gap:10px;
-        padding:10px;
-    }
-
-    .card img{
-        height:120px;
-    }
-
-    /* صفحة المنتج */
     .container{
-        flex-direction: column;
-        padding:20px;
-        text-align:center;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:15px;
+    }
+
+    .product-img{
+        width:100%;
     }
 
     .product-img img{
-        width:70%;
-        max-width:250px;
+        width:80%;
+        max-width:220px;
         height:auto;
     }
 
     .product-info{
         width:100%;
-        margin-top:20px;
+        text-align:center;
     }
 
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
 }
