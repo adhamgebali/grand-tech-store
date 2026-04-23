@@ -207,3 +207,48 @@ nav button{
     cursor:pointer;
     z-index:1001;
 }
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .search{
+        width: 90%;
+        position: static;
+        transform: none;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .hero{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 24px;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav button{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .card img{
+        height: 150px;
+    }
+
+}
