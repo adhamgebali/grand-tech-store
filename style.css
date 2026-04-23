@@ -110,3 +110,18 @@ nav button{
 .hero p{
     color:#ccc;
 }
+
+.search{
+    padding:12px 20px;
+    width:300px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    background:#1e2a3a;
+    color:white;
+    transition:0.3s;
+}
+
+.search:focus{
+    box-shadow:0 0 0 2px #00cfff;
+}
