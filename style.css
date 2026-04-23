@@ -22,9 +22,8 @@ header{
     color:white;
     transition:0.3s;
 
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
+    display:block;
+    margin:15px auto;
 }
 
 nav{
