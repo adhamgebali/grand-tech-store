@@ -187,3 +187,13 @@ nav button{
     cursor:pointer;
     font-size:20px;
 }
+
+.menu-btn{
+    position:fixed;
+    left:20px;
+    top:20px;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+    z-index:1000;
+}
