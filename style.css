@@ -8,13 +8,18 @@ body{
 header{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:20px;
 }
-
-input{
-    padding:10px;
-    width:300px;
-    border-radius:10px;
+.search{
+    padding:14px 25px;
+    width:350px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    background:#1e2a3a;
+    color:white;
+    transition:0.3s;
 }
 
 nav{
