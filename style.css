@@ -79,13 +79,13 @@ nav button{
 }
 
 .product-img img{
-    width:200px;
-    height:200px;
-    object-fit:contain; /* مهم جدا */
+    max-width:300px;
+    width:100%;
+    height:auto;
+    object-fit:contain;
     display:block;
     margin:auto;
 }
-
 img{
     max-width:100%;
     height:auto;
