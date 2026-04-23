@@ -79,8 +79,8 @@ nav button{
 }
 
 .product-img img{
-    max-width:300px;
     width:100%;
+    max-width:300px;
     height:auto;
     object-fit:contain;
     display:block;
