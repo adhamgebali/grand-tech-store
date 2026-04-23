@@ -197,3 +197,13 @@ nav button{
     color:white;
     z-index:1000;
 }
+
+.menu-btn{
+    position:fixed;
+    left:20px;
+    top:20px;
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+    z-index:1001;
+}
