@@ -96,10 +96,12 @@ nav button{
 }
 
 .product-img img{
-    width:100%;
-    max-width:220px;
-    height:auto;
+    width:200px;
+    height:200px;
+    object-fit:contain; /* مهم جدا */
+    display:block;
     margin:auto;
+}
 }
 img{
     max-width:100%;
