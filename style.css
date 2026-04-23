@@ -359,3 +359,27 @@ nav button{
     }
 
 }
+@media (max-width:768px){
+
+    .product-page{
+        flex-direction: column; /* يخليهم تحت بعض */
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-img{
+        width:100%;
+    }
+
+    .product-img img{
+        width:80%;
+        max-width:250px;
+        height:auto;
+    }
+
+    .product-info{
+        width:100%;
+        margin-top:20px;
+    }
+
+}
