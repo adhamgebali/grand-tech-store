@@ -5,10 +5,21 @@
 <title>GRANDTECHNOLOGY</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">✖</span>
+        <div id="popup-text"></div>
+    </div>
+</div>
 <body>
-
+<div id="sidebar" class="sidebar">
+    <a href="#">🏠 الرئيسية</a>
+   <a href="#" onclick="showAbout()">ℹ️ من نحن</a>
+<a href="mailto:ec.customer.support.service@gmail.com">📞 الدعم</a>
+<a href="#" onclick="showPrivacy()">🔒 سياسة الخصوصية</a>
+</div>
 <header>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
     <h1>GRANDTECHNOLOGY</h1>
    <input type="text" id="search" class="search" placeholder="...ابحث عن منتج" onkeyup="searchProducts()">
 </header>

@@ -184,3 +184,59 @@ function buy(){
 
 showProducts(products);
 loadProduct();
+
+function toggleMenu(){
+    let sidebar = document.getElementById("sidebar");
+
+    if(sidebar.style.left === "0px"){
+        sidebar.style.left = "-250px";
+    }else{
+        sidebar.style.left = "0px";
+    }
+}
+
+function showAbout(){
+    let text = `
+    <h2>من نحن</h2>
+    <p>
+    متجر إلكتروني يسهل عليكم شراء جميع قطع الكمبيوتر واللاب توب والشاشات الجيمينج وغيرها وجميع اكسسوارات الكمبيوتر.<br><br>
+    نقدم أفضل الأسعار مع ضمان الجودة والتوصيل السريع.
+    </p>
+    `;
+    openPopup(text);
+}
+
+function showPrivacy(){
+    let text = `
+    <h2>سياسة الخصوصية</h2>
+    <p>
+    1. جمع المعلومات<br>
+    يقوم متجر GRANDTECHNOLOGY بجمع المعلومات الضرورية فقط لإتمام عملية الشراء.<br><br>
+
+    2. استخدام المعلومات<br>
+    تُستخدم فقط لمعالجة الطلبات والتواصل مع العملاء.<br><br>
+
+    3. حماية البيانات<br>
+    لا نشارك بياناتك مع أي طرف ثالث دون موافقتك.<br><br>
+
+    4. الأمان<br>
+    نستخدم تقنيات حماية متقدمة.<br><br>
+
+    5. حقوق العملاء<br>
+    يمكنك طلب تعديل أو حذف بياناتك.<br><br>
+
+    6. التحديثات<br>
+    يمكن تحديث السياسة في أي وقت.
+    </p>
+    `;
+    openPopup(text);
+}
+
+function openPopup(content){
+    document.getElementById("popup-text").innerHTML = content;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
