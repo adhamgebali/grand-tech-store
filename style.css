@@ -111,7 +111,7 @@ img{
 
 .product-img,
 .product-info{
-    flex:1 1 100%; /* يخليهم ينزلوا تحت بعض */
+    flex:1; /* يخليهم ينزلوا تحت بعض */
 }
 
 .product-info button{
