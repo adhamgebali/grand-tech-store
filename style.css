@@ -84,19 +84,24 @@ nav button{
 /* صفحة المنتج */
 .product-page{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
     gap:20px;
     padding:20px;
-    flex-wrap:wrap; /* مهم للموبايل */
+    align-items:flex-start; /* مهم جدا */
 }
+.product-img{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
 .product-img img{
     width:100%;
     max-width:300px;
+    height:auto; /* دي اللي هتحل المشكلة */
 }
 
 .product-info{
-    max-width:400px;
+    flex:1;
 }
 
 .product-info button{
@@ -330,4 +335,27 @@ nav button{
     .product-info{
         margin-right:0;
     }
+}
+@media (max-width:768px){
+
+    .product-page{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        padding:20px !important;
+        height:auto !important;
+    }
+
+    .product-img img{
+        width:80% !important;
+        max-width:250px !important;
+    }
+
+    .product-info{
+        width:100% !important;
+        text-align:center !important;
+        margin:20px 0 !important;
+    }
+
 }
