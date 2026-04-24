@@ -349,10 +349,9 @@ showProducts();
 loadProduct();
 loadCart();
 updateCartCount();
-function toggleMenu(){
-    let sidebar = document.getElementById("sidebar");
 
-   function toggleMenu(){
+function toggleMenu(){
+   
     let sidebar = document.getElementById("sidebar");
 
     if(!sidebar) return;
