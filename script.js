@@ -83,6 +83,10 @@ specs:["16 Cores","3D Cache","AM5"]},
 
 /* ================= GPU ================= */
 
+{ id:120,name:"RX 570",price:3000,img:"images/gpu/rx570.png",cat:"gpu",specs:["4GB","GDDR5"]},
+{ id:121,name:"RX 580",price:3500,img:"images/gpu/rx580.png",cat:"gpu",specs:["8GB","GDDR5"]},
+{ id:122,name:"RX 5600 XT",price:6000,img:"images/gpu/rx5600.png",cat:"gpu",specs:["6GB","GDDR6"]},
+{ id:123,name:"RX 5700 XT",price:7500,img:"images/gpu/rx5700.png",cat:"gpu",specs:["8GB","GDDR6"]},
 { id:101,name:"GTX 960",price:2500,img:"images/gpu/gtx960.png",cat:"gpu",specs:["2GB","GDDR5"]},
 { id:102,name:"GTX 1060",price:3500,img:"images/gpu/gtx1060.png",cat:"gpu",specs:["6GB","GDDR5"]},
 { id:103,name:"GTX 1070",price:4500,img:"images/gpu/gtx1070.png",cat:"gpu",specs:["8GB","GDDR5"]},
