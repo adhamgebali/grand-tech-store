@@ -123,7 +123,8 @@ img{
 
 .search{
     padding:14px 25px;
-    width:350px;
+    width:90%; /* بدل 350px */
+    max-width:350px; /* يخليه مايكبرش قوي */
     border-radius:30px;
     border:none;
     outline:none;
@@ -132,7 +133,7 @@ img{
     transition:0.3s;
 
     display:block;
-    margin:20px auto; /* دي أهم سطر 🔥 */
+    margin:20px auto;
 }
 
 .search:focus{
