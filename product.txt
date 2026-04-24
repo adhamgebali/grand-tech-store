@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل المنتج</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+background:#0b1220;
+color:#fff;
+font-family:Cairo;
+margin:0;
+}
+
+.container{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+}
+
+/* الصورة */
+.product-img{
+width:100%;
+background:#111;
+padding:20px;
+border-radius:20px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.product-img img{
+width:80%;
+max-width:300px;
+height:auto;
+}
+/* البيانات */
+.product-info{
+flex:1;
+}
+
+.price-box{
+background:#111;
+padding:20px;
+border-radius:15px;
+margin:20px 0;
+}
+
+.price{
+color:#00ff88;
+font-size:24px;
+}
+
+/* المواصفات */
+.specs{
+margin-top:20px;
+}
+
+.specs li{
+margin:10px 0;
+color:#aaa;
+}
+
+/* الفورم */
+.form{
+margin-top:30px;
+background:#111;
+padding:20px;
+border-radius:15px;
+}
+
+.form input, .form textarea{
+width:100%;
+margin:10px 0;
+padding:10px;
+border-radius:10px;
+border:none;
+background:#1a2233;
+color:#fff;
+}
+
+.buy-btn{
+background:#00ff88;
+border:none;
+padding:15px;
+width:100%;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+margin-top:15px;
+}
+</style>
+
+</head>
+<div class="product-page">
+
+<!-- الصورة -->
+<div class="right">
+    <img id="img">
+</div>
+
+<!-- التفاصيل -->
+<div class="left">
+
+    <h2 id="name">اسم المنتج</h2>
+
+    <div class="price-box">
+        <span class="price" id="price">0 ج.م</span>
+        <p>السعر شامل الضريبة</p>
+    </div>
+
+    <p class="desc">
+        منتج بجودة عالية مناسب للألعاب والعمل الشاق 🔥
+    </p>
+
+    <ul class="specs" id="specs"></ul>
+
+    <!-- الفورم -->
+    <div class="buy-box">
+        <input id="username" placeholder="الاسم بالكامل">
+        <input id="phone" placeholder="رقم الهاتف">
+        <textarea id="address" placeholder="العنوان"></textarea>
+
+        <button onclick="buyNow()">إتمام الشراء</button>
+    </div>
+
+</div>
+
+</div>
+</html>
