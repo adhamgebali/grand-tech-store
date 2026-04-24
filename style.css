@@ -254,3 +254,54 @@ text-decoration:none;
     width:90%;
     max-width:500px;
 }
+.hero{
+    margin:15px;
+    padding:30px 20px;
+    border-radius:20px;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-text small{
+    color:#38bdf8;
+    font-size:12px;
+}
+
+.hero-text h2{
+    margin:10px 0;
+    font-size:22px;
+    line-height:1.5;
+}
+
+.hero-text span{
+    color:#00cfff;
+    font-weight:bold;
+}
+
+.hero-text p{
+    color:#ccc;
+    font-size:14px;
+    line-height:1.6;
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:#00cfff30;
+    border-radius:50%;
+    top:-50px;
+    left:-50px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#00ff8850;
+    border-radius:50%;
+    bottom:-50px;
+    right:-50px;
+}
