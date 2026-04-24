@@ -244,3 +244,30 @@ function openPopup(content){
 function closePopup(){
     document.getElementById("popup").style.display = "none";
 }
+//الجديد 
+let id = localStorage.getItem("product");
+
+if(id){
+let product = products.find(p => p.id == id);
+
+if(product){
+
+let nameEl = document.getElementById("name");
+let priceEl = document.getElementById("price");
+let imgEl = document.getElementById("img");
+
+if(nameEl) nameEl.innerText = product.name;
+if(priceEl) priceEl.innerText = product.price + " ج.م";
+if(imgEl) imgEl.src = product.img;
+
+let specsHTML = "";
+if(product.specs){
+product.specs.forEach(s=>{
+specsHTML += `<li>✔ ${s}</li>`;
+});
+}
+
+let specsEl = document.getElementById("specs");
+if(specsEl) specsEl.innerHTML = specsHTML;
+
+}
