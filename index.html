@@ -2,53 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRANDTECHNOLOGY</title>
 <link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">✖</span>
-        <div id="popup-text"></div>
-    </div>
-</div>
-<div id="sidebar" class="sidebar">
-    <a href="#">🏠 الرئيسية</a>
-   <a href="#" onclick="showAbout()">ℹ️ من نحن</a>
-<a href="https://mail.google.com/mail/?view=cm&to=ec.customer.support.service@gmail.com" target="_blank">📞 الدعم</a>
-<a href="#" onclick="showPrivacy()">🔒 سياسة الخصوصية</a>
-</div>
-<div class="top-section">
-
-<header>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<header class="header">
 <h1>GRANDTECHNOLOGY</h1>
-<input type="text" id="search" class="search" placeholder="...ابحث عن منتج" onkeyup="searchProducts()">
+<input type="text" id="search" placeholder="ابحث عن منتج..." onkeyup="searchProducts()">
 </header>
 
-<section class="hero">
-<div class="hero-text">
-<h1>أفضل قطع الكمبيوتر<br><span>بأفضل الأسعار</span></h1>
-<p>كروت شاشة، معالجات، رامات، شاشات، لابتوبات، واكسسوارات — كل ما تحتاجه في مكان واحد</p>
-</div>
-</section>
+<section id="products" class="grid"></section>
 
-<nav>
-<button onclick="filter('all')">الكل</button>
-<button onclick="filter('cpu')">معالجات</button>
-<button onclick="filter('gpu')">كروت شاشة</button>
-<button onclick="filter('ram')">رامات</button>
-<button onclick="filter('motherboard')">لوحات</button>
-<button onclick="filter('psu')">باور</button>
-<button onclick="filter('accessories')">اكسسوارات</button>
-</nav>
+<!-- زر السلة -->
+<a href="cart.html" class="cart-btn">
+🛒 <span id="cart-count">0</span>
+</a>
 
-</div>
-
-<section id="products"></section>
+<!-- زر واتساب -->
+<a href="https://wa.me/201040952410" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
 </body>
