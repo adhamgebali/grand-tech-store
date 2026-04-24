@@ -18,7 +18,7 @@ box.innerHTML+=`
 <h4>${p.name}</h4>
 <p>${p.price} ج.م</p>
 <button onclick="addToCart(${p.id})">اضافة للسلة</button>
-<button onclick="openProduct(${p.id})">شراء</button>
+<button onclick="buyNowDirect(${p.id})">شراء</button>
 </div>`;
 });
 }
@@ -176,3 +176,34 @@ showProducts();
 loadProduct();
 loadCart();
 updateCartCount();
+
+function buyNowDirect(id){
+
+let p = products.find(x => x.id == id);
+
+if(!p){
+alert("حصل خطأ");
+return;
+}
+
+let name = prompt("اكتب اسمك");
+let phone = prompt("رقمك");
+let address = prompt("عنوانك");
+
+if(!name || !phone || !address){
+alert("لازم تملى كل البيانات");
+return;
+}
+
+let msg = `🛒 طلب شراء مباشر
+📦 المنتج: ${p.name}
+💰 السعر: ${p.price} ج.م
+
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+📍 العنوان: ${address}`;
+
+window.open(`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`);
+
+alert("تم تحويلك للواتساب لإتمام الطلب ✅");
+}
