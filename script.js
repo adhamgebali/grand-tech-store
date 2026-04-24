@@ -349,3 +349,17 @@ showProducts();
 loadProduct();
 loadCart();
 updateCartCount();
+function toggleMenu(){
+    let sidebar = document.getElementById("sidebar");
+
+   function toggleMenu(){
+    let sidebar = document.getElementById("sidebar");
+
+    if(!sidebar) return;
+
+    if(sidebar.style.left === "0px"){
+        sidebar.style.left = "-260px";
+    }else{
+        sidebar.style.left = "0px";
+    }
+}
