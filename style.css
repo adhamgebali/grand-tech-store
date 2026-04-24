@@ -186,3 +186,73 @@ text-decoration:none;
 .buy-btn:hover{
     background:#00cc6a;
 }
+/* 🔥 SIDEBAR FIX */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-260px;
+    width:260px;
+    height:100%;
+    background:#0f172a;
+    padding-top:60px;
+    transition:0.3s;
+    z-index:9999;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px;
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px solid #1f2937;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+}
+
+/* زرار X */
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    font-size:22px;
+    cursor:pointer;
+    color:#fff;
+}
+
+/* زرار القائمة ☰ */
+.menu-btn{
+    position:fixed;
+    top:10px;
+    left:10px;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+    z-index:9999;
+    background:#132c44;
+    padding:8px 12px;
+    border-radius:10px;
+}
+
+/* popup */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+    z-index:20000;
+}
+
+.popup-content{
+    background:#111827;
+    padding:20px;
+    border-radius:15px;
+    width:90%;
+    max-width:500px;
+}
