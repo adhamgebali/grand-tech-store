@@ -128,7 +128,7 @@ specs:["16 Cores","3D Cache","AM5"]},
 { id:232,name:"Mechanical Keyboard",price:1200,img:"images/accessories/kb1.png",cat:"accessories",specs:["RGB","Blue Switch"]},
 ];
 
-/* عرض */
+/* عرض المنتجات */
 function showProducts(list=products){
 let box=document.getElementById("products");
 if(!box) return;
@@ -141,33 +141,35 @@ box.innerHTML+=`
 <img src="${p.img}">
 <h4>${p.name}</h4>
 <p>${p.price} ج.م</p>
+
 <button onclick="addToCart(${p.id})">اضافة للسلة</button>
-<button onclick="buyNowDirect(${p.id})">شراء</button>
+<button onclick="openProduct(${p.id})">شراء</button>
+
 </div>`;
 });
 }
 
-/* بحث */
+/* البحث */
 function searchProducts(){
 let val=document.getElementById("search").value.toLowerCase();
 showProducts(products.filter(p=>p.name.toLowerCase().includes(val)));
 }
 
-/* فتح منتج */
+/* فتح صفحة المنتج */
 function openProduct(id){
 localStorage.setItem("product",id);
 window.location="product.html";
 }
 
-/* تحميل منتج */
+/* تحميل المنتج */
 function loadProduct(){
 let id=localStorage.getItem("product");
 let p=products.find(x=>x.id==id);
 if(!p) return;
 
-let nameEl = document.getElementById("name");
-let priceEl = document.getElementById("price");
-let imgEl = document.getElementById("img");
+let nameEl=document.getElementById("name");
+let priceEl=document.getElementById("price");
+let imgEl=document.getElementById("img");
 
 if(nameEl) nameEl.innerText=p.name;
 if(priceEl) priceEl.innerText=p.price+" ج.م";
@@ -184,22 +186,12 @@ let exist=cart.find(x=>x.id==id);
 if(exist){
 exist.qty++;
 }else{
-let newItem = {...p, qty:1};
-cart.push(newItem);
+cart.push({...p,qty:1});
 }
 
 localStorage.setItem("cart",JSON.stringify(cart));
 updateCartCount();
 alert("تمت الإضافة");
-}
-
-function addToCartFromPage(){
-let id=localStorage.getItem("product");
-addToCart(Number(id));
-}
-
-function goToCart(){
-window.location="cart.html";
 }
 
 /* تحميل السلة */
@@ -240,8 +232,7 @@ box.innerHTML+=`
 box.innerHTML+=`
 <h3>الإجمالي: ${total} ج.م</h3>
 
-<button onclick="checkout('cash')">الدفع عند الاستلام</button>
-<button onclick="checkout('vodafone')">فودافون كاش</button>
+<button onclick="goToCheckout()">إكمال الدفع</button>
 `;
 }
 
@@ -270,15 +261,25 @@ let el=document.getElementById("cart-count");
 if(el) el.innerText=count;
 }
 
-/* checkout */
-function checkout(type){
+/* تحويل لصفحة الدفع */
+function goToCheckout(){
+window.location="checkout.html";
+}
+
+/* الدفع */
+function checkoutOrder(){
 
 let cart=JSON.parse(localStorage.getItem("cart"))||[];
-if(cart.length==0){alert("السلة فاضية");return;}
 
-let name=prompt("اسمك");
-let phone=prompt("رقمك");
-let address=prompt("عنوانك");
+if(cart.length==0){
+alert("السلة فاضية");
+return;
+}
+
+let name=document.getElementById("clientName").value;
+let phone=document.getElementById("clientPhone").value;
+let address=document.getElementById("clientAddress").value;
+let payment=document.getElementById("payment").value;
 
 if(!name || !phone || !address){
 alert("لازم تملى البيانات");
@@ -298,50 +299,51 @@ msg+=`\n\n👤 ${name}`;
 msg+=`\n📞 ${phone}`;
 msg+=`\n📍 ${address}`;
 
-if(type=="vodafone"){
+if(payment=="vodafone"){
 alert("حول فلوس على 01040952410");
-msg+="\n💳 الدفع: فودافون كاش";
+msg+="\n💳 فودافون كاش";
 }else{
-msg+="\n💳 الدفع: عند الاستلام";
+msg+="\n💳 عند الاستلام";
 }
 
-alert("جارٍ تحويلك للواتساب...");
-
-window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
+window.location.href=`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
 
 localStorage.removeItem("cart");
 }
 
-/* شراء مباشر */
-function buyNowDirect(id){
+/* شراء مباشر من صفحة المنتج */
+function buyNow(){
 
-let p = products.find(x => x.id == id);
-
-if(!p){
-alert("حصل خطأ");
-return;
-}
-
-let name = prompt("اكتب اسمك");
-let phone = prompt("رقمك");
-let address = prompt("عنوانك");
+let name=document.getElementById("clientName").value;
+let phone=document.getElementById("clientPhone").value;
+let address=document.getElementById("clientAddress").value;
+let payment=document.getElementById("payment").value;
 
 if(!name || !phone || !address){
-alert("لازم تملى كل البيانات");
+alert("لازم تملى البيانات");
 return;
 }
 
-let msg = `🛒 طلب شراء مباشر
-📦 المنتج: ${p.name}
-💰 السعر: ${p.price} ج.م
+let id=localStorage.getItem("product");
+let p=products.find(x=>x.id==id);
 
-👤 الاسم: ${name}
-📞 الهاتف: ${phone}
-📍 العنوان: ${address}`;
+let msg=`🛒 طلب شراء مباشر
 
-alert("جارٍ تحويلك للواتساب...");
+📦 ${p.name}
+💰 ${p.price} ج.م
 
-window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
+👤 ${name}
+📞 ${phone}
+📍 ${address}`;
+
+if(payment=="vodafone"){
+alert("حول على 01040952410");
+msg+="\n💳 فودافون كاش";
+}else{
+msg+="\n💳 عند الاستلام";
+}
+
+window.location.href=`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
 }
 
 /* تشغيل */
@@ -350,100 +352,28 @@ loadProduct();
 loadCart();
 updateCartCount();
 
+/* القائمة */
 function toggleMenu(){
-   
-    let sidebar = document.getElementById("sidebar");
+let sidebar=document.getElementById("sidebar");
+if(!sidebar) return;
 
-    if(!sidebar) return;
-
-    if(sidebar.style.left === "0px"){
-        sidebar.style.left = "-260px";
-    }else{
-        sidebar.style.left = "0px";
-    }
-}
-function showAbout(){
-    let text = `
-    <h2>من نحن</h2>
-    <p>
-    متجر إلكتروني يسهل عليكم شراء جميع قطع الكمبيوتر واللاب توب والشاشات الجيمينج وغيرها وجميع اكسسوارات الكمبيوتر.<br><br>
-    نقدم أفضل الأسعار مع ضمان الجودة والتوصيل السريع.
-    </p>
-    `;
-    openPopup(text);
+sidebar.style.left = sidebar.style.left === "0px" ? "-260px" : "0px";
 }
 
-function showPrivacy(){
-    let text = `
-    <h2>سياسة الخصوصية</h2>
-    <p>
-    1. جمع المعلومات<br>
-    يقوم متجر GRANDTECHNOLOGY بجمع المعلومات الضرورية فقط لإتمام عملية الشراء، مثل الاسم ورقم الهاتف وعنوان التوصيل.<br><br>
-
-    2. استخدام المعلومات<br>
-    تُستخدم المعلومات المجمعة حصريًا لأغراض معالجة الطلبات والتواصل مع العملاء بشأن مشترياتهم وتقديم خدمة العملاء.<br><br>
-
-    3. حماية البيانات<br>
-    نلتزم بحماية بياناتك الشخصية ولا نشاركها مع أي طرف ثالث دون موافقتك الصريحة.<br><br>
-
-    4. الأمان والتشفير<br>
-    نستخدم تقنيات حماية متقدمة لضمان أمان بياناتك.<br><br>
-
-    5. حقوق العملاء<br>
-    يمكنك طلب تعديل أو حذف بياناتك في أي وقت.<br><br>
-
-    6. التحديثات<br>
-    يمكن تحديث السياسة في أي وقت.
-    </p>
-    `;
-    openPopup(text);
-}
-
+/* popup */
 function openPopup(content){
-    document.getElementById("popup-text").innerHTML = content;
-    document.getElementById("popup").style.display = "flex";
+document.getElementById("popup-text").innerHTML=content;
+document.getElementById("popup").style.display="flex";
 }
 
 function closePopup(){
-    document.getElementById("popup").style.display = "none";
-}
-function buyNow(){
-
-let name = document.getElementById("clientName").value;
-let phone = document.getElementById("clientPhone").value;
-let address = document.getElementById("clientAddress").value;
-let payment = document.getElementById("payment").value;
-
-if(!name || !phone || !address){
-alert("لازم تملى البيانات");
-return;
+document.getElementById("popup").style.display="none";
 }
 
-let id = localStorage.getItem("product");
-let p = products.find(x => x.id == id);
-
-if(!p){
-alert("المنتج مش موجود");
-return;
+function showAbout(){
+openPopup("متجر GRANDTECHNOLOGY يقدم أفضل قطع الكمبيوتر بأسعار مميزة وجودة عالية.");
 }
 
-let msg = `🛒 طلب شراء مباشر
-
-📦 المنتج: ${p.name}
-💰 السعر: ${p.price} ج.م
-
-👤 الاسم: ${name}
-📞 الهاتف: ${phone}
-📍 العنوان: ${address}`;
-
-if(payment=="vodafone"){
-alert("حول فلوس على 01040952410");
-msg += "\n💳 الدفع: فودافون كاش";
-}else{
-msg += "\n💳 الدفع: عند الاستلام";
-}
-
-alert("جارٍ تحويلك للواتساب...");
-
-window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
+function showPrivacy(){
+openPopup("سياسة الخصوصية: نحن نحافظ على بياناتك ولا نشاركها مع أي جهة.");
 }

@@ -9,30 +9,31 @@
 
 <body>
 
-<!-- 🔥 حط ده هنا -->
+<!-- القائمة الجانبية -->
 <div id="sidebar" class="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
 
-<div class="close-btn" onclick="toggleMenu()">✖</div>
-
-<a href="#">🏠 الرئيسية</a>
-<a href="#" onclick="showAbout(); return false;">ℹ️ من نحن</a>
-<a href="tel:01040952410">📞 01040952410</a>
-<a href="mailto:ec.customer.support.service@gmail.com">📧 تواصل معنا</a>
-<a href="#" onclick="showPrivacy(); return false;">🔒 سياسة الخصوصية</a>
-
+    <a href="#">🏠 الرئيسية</a>
+    <a href="#" onclick="showAbout()">ℹ️ من نحن</a>
+    <a href="tel:01040952410">📞 01040952410</a>
+    <a href="mailto:ec.customer.support.service@gmail.com">📧 تواصل معنا</a>
+    <a href="#" onclick="showPrivacy()">🔒 سياسة الخصوصية</a>
 </div>
 
+<!-- popup -->
 <div id="popup" class="popup">
     <div class="popup-content">
         <span class="close" onclick="closePopup()">✖</span>
         <div id="popup-text"></div>
     </div>
 </div>
+
 <header class="header">
 
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <h1>GRANDTECHNOLOGY</h1>
+
 <div class="hero">
     <div class="hero-text">
         <small>متجر GRANDTECHNOLOGY</small>
@@ -47,6 +48,7 @@
         </p>
     </div>
 </div>
+
 <input type="text" id="search" placeholder="...ابحث عن منتج" onkeyup="searchProducts()">
 
 </header>
@@ -58,14 +60,9 @@
 🛒 <span id="cart-count">0</span>
 </a>
 
-<!-- زر واتساب -->
+<!-- واتساب -->
 <a href="https://wa.me/201040952410" class="whatsapp">💬</a>
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">✖</span>
-    <div id="popup-text"></div>
-  </div>
-</div>
+
 <script src="script.js"></script>
 </body>
 </html>
