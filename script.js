@@ -41,9 +41,13 @@ let id=localStorage.getItem("product");
 let p=products.find(x=>x.id==id);
 if(!p) return;
 
-document.getElementById("name").innerText=p.name;
-document.getElementById("price").innerText=p.price+" ج.م";
-document.getElementById("img").src=p.img;
+let nameEl = document.getElementById("name");
+let priceEl = document.getElementById("price");
+let imgEl = document.getElementById("img");
+
+if(nameEl) nameEl.innerText=p.name;
+if(priceEl) priceEl.innerText=p.price+" ج.م";
+if(imgEl) imgEl.src=p.img;
 }
 
 /* السلة */
@@ -56,8 +60,8 @@ let exist=cart.find(x=>x.id==id);
 if(exist){
 exist.qty++;
 }else{
-p.qty=1;
-cart.push(p);
+let newItem = {...p, qty:1};
+cart.push(newItem);
 }
 
 localStorage.setItem("cart",JSON.stringify(cart));
@@ -83,6 +87,11 @@ let cart=JSON.parse(localStorage.getItem("cart"))||[];
 let total=0;
 
 box.innerHTML="";
+
+if(cart.length==0){
+box.innerHTML="<h3>السلة فارغة</h3>";
+return;
+}
 
 cart.forEach((p,i)=>{
 let t=p.price*p.qty;
@@ -147,36 +156,39 @@ let name=prompt("اسمك");
 let phone=prompt("رقمك");
 let address=prompt("عنوانك");
 
+if(!name || !phone || !address){
+alert("لازم تملى البيانات");
+return;
+}
+
 let total=0;
-let msg="طلب جديد\n";
+let msg="🛒 طلب جديد\n\n";
 
 cart.forEach(p=>{
-msg+=`${p.name} × ${p.qty}\n`;
+msg+=`📦 ${p.name} × ${p.qty}\n`;
 total+=p.price*p.qty;
 });
 
-msg+=`\nالإجمالي: ${total}`;
-msg+=`\n${name} - ${phone} - ${address}`;
+msg+=`\n💰 الإجمالي: ${total} ج.م`;
+msg+=`\n\n👤 ${name}`;
+msg+=`\n📞 ${phone}`;
+msg+=`\n📍 ${address}`;
 
 if(type=="vodafone"){
 alert("حول فلوس على 01040952410");
-msg+="\nالدفع: فودافون كاش";
+msg+="\n💳 الدفع: فودافون كاش";
 }else{
-msg+="\nالدفع: عند الاستلام";
+msg+="\n💳 الدفع: عند الاستلام";
 }
 
-window.open(`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`);
+alert("جارٍ تحويلك للواتساب...");
+
+window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
 
 localStorage.removeItem("cart");
-window.location="index.html";
 }
 
-/* تشغيل */
-showProducts();
-loadProduct();
-loadCart();
-updateCartCount();
-
+/* شراء مباشر */
 function buyNowDirect(id){
 
 let p = products.find(x => x.id == id);
@@ -203,7 +215,13 @@ let msg = `🛒 طلب شراء مباشر
 📞 الهاتف: ${phone}
 📍 العنوان: ${address}`;
 
-window.open(`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`);
+alert("جارٍ تحويلك للواتساب...");
 
-alert("تم تحويلك للواتساب لإتمام الطلب ✅");
+window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
 }
+
+/* تشغيل */
+showProducts();
+loadProduct();
+loadCart();
+updateCartCount();
