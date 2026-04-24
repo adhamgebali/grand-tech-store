@@ -21,14 +21,32 @@
 
 <div class="buy-box">
 
-<h3>بيانات الشراء</h3>
+<h3 class="form-title">🛒 بيانات الشراء</h3>
 
-<input id="username" placeholder="الاسم بالكامل">
-<input id="phone" placeholder="رقم الهاتف">
-<textarea id="address" placeholder="العنوان"></textarea>
+<div class="input-group">
+<label>الاسم بالكامل</label>
+<input type="text" id="clientName" placeholder="اكتب اسمك هنا">
+</div>
 
-<button onclick="addToCartFromPage()">اضافة للسلة</button>
-<button onclick="buyNow()">شراء الآن</button>
+<div class="input-group">
+<label>رقم الهاتف</label>
+<input type="text" id="clientPhone" placeholder="01xxxxxxxxx">
+</div>
+
+<div class="input-group">
+<label>عنوان التوصيل</label>
+<textarea id="clientAddress" placeholder="المحافظة - المدينة - الشارع"></textarea>
+</div>
+
+<div class="input-group">
+<label>طريقة الدفع</label>
+<select id="payment">
+<option value="cash">الدفع عند الاستلام</option>
+<option value="vodafone">فودافون كاش</option>
+</select>
+</div>
+
+<button class="buy-btn" onclick="buyNow()">شراء الآن</button>
 
 </div>
 

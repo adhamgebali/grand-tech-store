@@ -407,3 +407,43 @@ function openPopup(content){
 function closePopup(){
     document.getElementById("popup").style.display = "none";
 }
+function buyNow(){
+
+let name = document.getElementById("clientName").value;
+let phone = document.getElementById("clientPhone").value;
+let address = document.getElementById("clientAddress").value;
+let payment = document.getElementById("payment").value;
+
+if(!name || !phone || !address){
+alert("لازم تملى البيانات");
+return;
+}
+
+let id = localStorage.getItem("product");
+let p = products.find(x => x.id == id);
+
+if(!p){
+alert("المنتج مش موجود");
+return;
+}
+
+let msg = `🛒 طلب شراء مباشر
+
+📦 المنتج: ${p.name}
+💰 السعر: ${p.price} ج.م
+
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+📍 العنوان: ${address}`;
+
+if(payment=="vodafone"){
+alert("حول فلوس على 01040952410");
+msg += "\n💳 الدفع: فودافون كاش";
+}else{
+msg += "\n💳 الدفع: عند الاستلام";
+}
+
+alert("جارٍ تحويلك للواتساب...");
+
+window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
+}
