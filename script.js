@@ -314,14 +314,48 @@ localStorage.removeItem("cart");
 /* شراء مباشر من صفحة المنتج */
 function buyNow(){
 
-let name=document.getElementById("clientName").value;
-let phone=document.getElementById("clientPhone").value;
-let address=document.getElementById("clientAddress").value;
-let payment=document.getElementById("payment").value;
+let name = document.getElementById("clientName").value;
+let phone = document.getElementById("clientPhone").value;
+let address = document.getElementById("clientAddress").value;
+let payment = document.getElementById("payment").value;
 
 if(!name || !phone || !address){
 alert("لازم تملى البيانات");
 return;
+}
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cart.length == 0){
+alert("السلة فاضية");
+return;
+}
+
+let total = 0;
+let msg = "🛒 طلب جديد\n\n";
+
+cart.forEach(p=>{
+msg += `📦 ${p.name} × ${p.qty}\n`;
+total += p.price * p.qty;
+});
+
+msg += `\n💰 الإجمالي: ${total} ج.م`;
+msg += `\n\n👤 ${name}`;
+msg += `\n📞 ${phone}`;
+msg += `\n📍 ${address}`;
+
+if(payment == "vodafone"){
+alert("حول فلوس على 01040952410");
+msg += "\n💳 الدفع: فودافون كاش";
+}else{
+msg += "\n💳 الدفع: عند الاستلام";
+}
+
+alert("جارٍ تحويلك للواتساب...");
+
+window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg)}`;
+
+localStorage.removeItem("cart");
 }
 
 let id=localStorage.getItem("product");
