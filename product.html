@@ -95,77 +95,39 @@ margin-top:15px;
 </style>
 
 </head>
-<body>
-
-<div class="container">
+<div class="product-page">
 
 <!-- الصورة -->
-<div class="product-img">
-        <img id="img">
+<div class="right">
+    <img id="img">
+</div>
+
+<!-- التفاصيل -->
+<div class="left">
+
+    <h2 id="name">اسم المنتج</h2>
+
+    <div class="price-box">
+        <span class="price" id="price">0 ج.م</span>
+        <p>السعر شامل الضريبة</p>
     </div>
 
-<!-- البيانات -->
-<div class="product-info">
+    <p class="desc">
+        منتج بجودة عالية مناسب للألعاب والعمل الشاق 🔥
+    </p>
 
-<h2 id="name"></h2>
+    <ul class="specs" id="specs"></ul>
 
-<div class="price-box">
-<p>السعر</p>
-<div class="price" id="price"></div>
-<p style="color:#888">السعر شامل الضريبة</p>
-</div>
+    <!-- الفورم -->
+    <div class="buy-box">
+        <input id="username" placeholder="الاسم بالكامل">
+        <input id="phone" placeholder="رقم الهاتف">
+        <textarea id="address" placeholder="العنوان"></textarea>
 
-<!-- المواصفات -->
-<ul class="specs" id="specs">
-<li>✔ أداء عالي</li>
-<li>✔ جودة ممتازة</li>
-<li>✔ مناسب للألعاب</li>
-<li>✔ ضمان حقيقي</li>
-</ul>
-
-<!-- الفورم -->
-<div class="form">
-<h3>بيانات الشراء</h3>
-
-<input id="username" placeholder="الاسم بالكامل">
-<input id="phone" placeholder="رقم الهاتف">
-<textarea id="address" placeholder="العنوان بالتفصيل"></textarea>
-
-<button class="buy-btn" onclick="buyNow()">إتمام الشراء</button>
-</div>
+        <button onclick="buyNow()">إتمام الشراء</button>
+    </div>
 
 </div>
 
 </div>
-
-<script src="script.js"></script>
-
-<script>
-function buyNow(){
-
-let name = document.getElementById("name").innerText;
-let price = document.getElementById("price").innerText;
-
-let user = document.getElementById("username").value;
-let phone = document.getElementById("phone").value;
-let address = document.getElementById("address").value;
-
-if(!user || !phone || !address){
-alert("من فضلك املأ كل البيانات");
-return;
-}
-
-let msg = `🛒 طلب شراء جديد
-📦 المنتج: ${name}
-💰 السعر: ${price}
-
-👤 الاسم: ${user}
-📞 الهاتف: ${phone}
-📍 العنوان: ${address}`;
-
-window.open(`https://wa.me/201040952410?text=${encodeURIComponent(msg)}`);
-}
-</script>
-
-</body>
 </html>
