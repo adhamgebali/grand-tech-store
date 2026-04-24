@@ -223,16 +223,14 @@ text-decoration:none;
 
 /* زرار القائمة ☰ */
 .menu-btn{
-    position:fixed;
-    top:10px;
+    position:absolute; /* بدل fixed لو موجود */
     left:10px;
-    font-size:28px;
-    color:#fff;
-    cursor:pointer;
-    z-index:9999;
+    top:10px;
+    font-size:26px;
     background:#132c44;
-    padding:8px 12px;
+    padding:10px;
     border-radius:10px;
+    cursor:pointer;
 }
 
 /* popup */
