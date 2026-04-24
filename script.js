@@ -124,7 +124,7 @@ specs:["16 Cores","3D Cache","AM5"]},
 /* ================= Accessories ================= */
 
 { id:230,name:"Gaming Headset",price:800,img:"images/accessories/hs1.png",cat:"accessories",specs:["RGB","Surround"]},
-{ id:231,name:"Wireless Mouse",price:400,img:"images/accessories/mouse.png",cat:"accessories",specs:["Wireless","RGB"]},
+{ id:231,name:"Forev Mechanical Mouse",price:600,img:"images/accessories/mouse.png",cat:"accessories",specs:["Wireless","RGB"]},
 { id:232,name:"Mechanical Keyboard",price:1200,img:"images/accessories/kb1.png",cat:"accessories",specs:["RGB","Blue Switch"]},
 ];
 
