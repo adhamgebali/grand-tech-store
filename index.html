@@ -15,10 +15,10 @@
 <div class="close-btn" onclick="toggleMenu()">✖</div>
 
 <a href="#">🏠 الرئيسية</a>
-<a href="#" onclick="showAbout()">ℹ️ من نحن</a>
+<a href="#" onclick="showAbout(); return false;">ℹ️ من نحن</a>
 <a href="tel:01040952410">📞 01040952410</a>
 <a href="mailto:ec.customer.support.service@gmail.com">📧 تواصل معنا</a>
-<a href="#" onclick="showPrivacy()">🔒 سياسة الخصوصية</a>
+<a href="#" onclick="showPrivacy(); return false;">🔒 سياسة الخصوصية</a>
 
 </div>
 
@@ -47,7 +47,12 @@
 
 <!-- زر واتساب -->
 <a href="https://wa.me/201040952410" class="whatsapp">💬</a>
-
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">✖</span>
+    <div id="popup-text"></div>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
