@@ -305,3 +305,31 @@ text-decoration:none;
     bottom:-50px;
     right:-50px;
 }
+.product-container{
+display:flex;
+gap:40px;
+align-items:flex-start;
+justify-content:center;
+margin:30px;
+}
+
+.product-image img{
+width:250px;
+}
+
+.product-info{
+text-align:right;
+max-width:400px;
+}
+
+#specs ul{
+padding:0;
+list-style:none;
+}
+
+#specs li{
+background:#111827;
+margin:5px 0;
+padding:8px;
+border-radius:8px;
+}
