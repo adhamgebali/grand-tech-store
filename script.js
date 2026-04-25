@@ -232,7 +232,7 @@ box.innerHTML+=`
 box.innerHTML+=`
 <h3>الإجمالي: ${total} ج.م</h3>
 
-<button onclick="goToCheckout()">إكمال الدفع</button>
+<button onclick="goToProductFromCart()">إكمال الدفع</button>
 `;
 }
 
@@ -357,9 +357,10 @@ window.location.href = `https://wa.me/201040952410?text=${encodeURIComponent(msg
 
 localStorage.removeItem("cart");
 }
+function sendDirectOrder(name, phone, address, payment){
 
-let id=localStorage.getItem("product");
-let p=products.find(x=>x.id==id);
+let id = localStorage.getItem("product");
+let p = products.find(x=>x.id==id);
 
 let msg=`🛒 طلب شراء مباشر
 
@@ -410,4 +411,19 @@ openPopup("متجر GRANDTECHNOLOGY يقدم أفضل قطع الكمبيوتر 
 
 function showPrivacy(){
 openPopup("سياسة الخصوصية: نحن نحافظ على بياناتك ولا نشاركها مع أي جهة.");
+}
+function goToProductFromCart(){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cart.length == 0){
+alert("السلة فاضية");
+return;
+}
+
+// ناخد أول منتج في السلة
+localStorage.setItem("product", cart[0].id);
+
+// نروح لصفحة المنتج
+window.location = "product.html";
 }
