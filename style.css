@@ -333,3 +333,45 @@ margin:5px 0;
 padding:8px;
 border-radius:8px;
 }
+.product-container{
+display:flex;
+gap:30px;
+align-items:flex-start;
+padding:20px;
+flex-wrap:wrap;
+}
+
+/* الصورة */
+.product-image img{
+width:260px;
+border-radius:10px;
+}
+
+/* المعلومات */
+.product-info{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:300px;
+}
+
+/* السعر */
+.price{
+color:#00ff9d;
+font-size:22px;
+}
+
+/* المواصفات */
+#specs{
+margin-top:10px;
+}
+
+#specs ul{
+padding:0;
+list-style:none;
+}
+
+#specs li{
+margin:5px 0;
+color:#ccc;
+}
