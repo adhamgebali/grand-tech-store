@@ -170,10 +170,22 @@ if(!p) return;
 let nameEl=document.getElementById("name");
 let priceEl=document.getElementById("price");
 let imgEl=document.getElementById("img");
+let specsEl=document.getElementById("specs"); // 👈 مهم
 
 if(nameEl) nameEl.innerText=p.name;
 if(priceEl) priceEl.innerText=p.price+" ج.م";
 if(imgEl) imgEl.src=p.img;
+
+/* 🔥 عرض المواصفات */
+if(specsEl && p.specs){
+let html="<ul>";
+p.specs.forEach(s=>{
+html+=`<li>${s}</li>`;
+});
+html+="</ul>";
+
+specsEl.innerHTML=html;
+}
 }
 
 /* السلة */
