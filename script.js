@@ -163,28 +163,55 @@ window.location="product.html";
 
 /* تحميل المنتج */
 function loadProduct(){
-let id=localStorage.getItem("product");
-let p=products.find(x=>x.id==id);
+
+let fromCart = localStorage.getItem("fromCart");
+let box = document.getElementById("cart-products");
+
+if(fromCart == "yes"){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(!box) return;
+
+let html = "";
+
+cart.forEach(p=>{
+html += `
+<div class="card">
+<img src="${p.img}" style="width:100px">
+<h4>${p.name}</h4>
+<p>${p.price} × ${p.qty}</p>
+</div>
+`;
+});
+
+box.innerHTML = html;
+
+// ❌ نلغي العلم بعد الاستخدام
+localStorage.removeItem("fromCart");
+
+}else{
+
+// 👇 المنتج العادي
+let id = localStorage.getItem("product");
+let p = products.find(x=>x.id==id);
 if(!p) return;
 
-let nameEl=document.getElementById("name");
-let priceEl=document.getElementById("price");
-let imgEl=document.getElementById("img");
-let specsEl=document.getElementById("specs"); // 👈 مهم
+document.getElementById("name").innerText = p.name;
+document.getElementById("price").innerText = p.price+" ج.م";
+document.getElementById("img").src = p.img;
 
-if(nameEl) nameEl.innerText=p.name;
-if(priceEl) priceEl.innerText=p.price+" ج.م";
-if(imgEl) imgEl.src=p.img;
-
-/* 🔥 عرض المواصفات */
+// المواصفات
+let specsEl=document.getElementById("specs");
 if(specsEl && p.specs){
 let html="<ul>";
 p.specs.forEach(s=>{
 html+=`<li>${s}</li>`;
 });
 html+="</ul>";
-
 specsEl.innerHTML=html;
+}
+
 }
 }
 
@@ -433,9 +460,9 @@ alert("السلة فاضية");
 return;
 }
 
-// ناخد أول منتج في السلة
-localStorage.setItem("product", cart[0].id);
+// 👇 نحفظ إننا جايين من السلة
+localStorage.setItem("fromCart", "yes");
 
-// نروح لصفحة المنتج
+// 👇 نروح لصفحة المنتج
 window.location = "product.html";
 }
