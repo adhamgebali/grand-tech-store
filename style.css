@@ -1,140 +1,142 @@
 body{
-margin:0;
-font-family:Arial;
-background:#0b1b2b;
-color:#fff;
+    margin:0;
+    font-family:Arial;
+    background:#ffffff;
+    color:#222;
 }
 
 /* header */
 .header{
-text-align:center;
-padding:15px;
+    text-align:center;
+    padding:15px;
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
 }
 
 .header input{
-width:90%;
-padding:12px;
-border-radius:20px;
-border:none;
-margin-top:10px;
+    width:90%;
+    padding:12px;
+    border-radius:20px;
+    border:1px solid #ddd;
+    margin-top:10px;
+    background:#f5f5f5;
+    color:#222;
 }
 
 /* المنتجات */
 .grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-padding:10px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    padding:10px;
 }
 
 .card{
-background:#132c44;
-padding:10px;
-border-radius:10px;
-text-align:center;
+    background:#ffffff;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #e5e5e5;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .card img{
-width:100%;
-height:120px;
-object-fit:contain;
+    width:100%;
+    height:120px;
+    object-fit:contain;
 }
 
 .card button{
-width:100%;
-margin-top:5px;
-padding:8px;
-border:none;
-border-radius:8px;
+    width:100%;
+    margin-top:5px;
+    padding:8px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
 }
 
 /* المنتج */
 .product-page{
-text-align:center;
-padding:15px;
+    text-align:center;
+    padding:15px;
 }
 
 .product-page img{
-width:80%;
-max-width:250px;
+    width:80%;
+    max-width:250px;
 }
 
 .price{
-color:#00ff88;
-font-size:22px;
-}
-
-.buy-box button{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:none;
-border-radius:10px;
+    color:#00a86b;
+    font-size:22px;
 }
 
 /* السلة */
 #cart{
-padding:10px;
+    padding:10px;
 }
 
 .qty{
-display:flex;
-justify-content:center;
-gap:10px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
 }
 
 .qty button{
-width:30px;
-height:30px;
+    width:30px;
+    height:30px;
 }
 
 /* زر السلة */
 .cart-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#00ff88;
-padding:15px;
-border-radius:50%;
-color:#000;
-text-decoration:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#00d084;
+    padding:15px;
+    border-radius:50%;
+    color:#000;
+    text-decoration:none;
 }
 
-/* رقم */
+/* رقم السلة */
 #cart-count{
-position:absolute;
-top:-5px;
-right:-5px;
-background:red;
-color:#fff;
-font-size:12px;
-padding:3px 6px;
-border-radius:50%;
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    background:red;
+    color:#fff;
+    font-size:12px;
+    padding:3px 6px;
+    border-radius:50%;
 }
 
 /* واتساب */
 .whatsapp{
-position:fixed;
-bottom:80px;
-left:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-color:#fff;
-text-decoration:none;
+    position:fixed;
+    bottom:80px;
+    left:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
 }
+
+/* بيانات الشراء */
 .buy-box{
-    background: linear-gradient(145deg,#0f172a,#111827);
+    background:#ffffff;
     padding:20px;
     border-radius:15px;
     margin-top:20px;
-    border:1px solid #1f2937;
+    border:1px solid #ddd;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
 .form-title{
     margin-bottom:15px;
     font-size:18px;
-    color:#fff;
+    color:#222;
 }
 
 .input-group{
@@ -144,7 +146,7 @@ text-decoration:none;
 .input-group label{
     display:block;
     margin-bottom:5px;
-    color:#aaa;
+    color:#555;
     font-size:14px;
 }
 
@@ -153,17 +155,18 @@ text-decoration:none;
     width:100%;
     padding:12px;
     border-radius:12px;
-    border:1px solid #1f2937;
-    background:#0b1220;
-    color:#fff;
+    border:1px solid #ddd;
+    background:#f8f8f8;
+    color:#222;
     outline:none;
     transition:0.3s;
+    box-sizing:border-box;
 }
 
 .input-group input:focus,
 .input-group textarea:focus{
-    border-color:#00ff88;
-    box-shadow:0 0 5px #00ff88;
+    border-color:#00c878;
+    box-shadow:0 0 5px rgba(0,200,120,0.25);
 }
 
 .input-group textarea{
@@ -174,7 +177,7 @@ text-decoration:none;
 .buy-btn{
     width:100%;
     padding:15px;
-    background:#00ff88;
+    background:#00d084;
     border:none;
     border-radius:12px;
     font-size:18px;
@@ -183,54 +186,53 @@ text-decoration:none;
     color:#000;
 }
 
-.buy-btn:hover{
-    background:#00cc6a;
-}
-/* 🔥 SIDEBAR FIX */
+/* SIDEBAR */
 .sidebar{
     position:fixed;
     top:0;
     left:-260px;
     width:260px;
     height:100%;
-    background:#0f172a;
+    background:#ffffff;
     padding-top:60px;
     transition:0.3s;
     z-index:9999;
+    box-shadow:3px 0 15px rgba(0,0,0,0.12);
 }
 
 .sidebar a{
     display:block;
     padding:15px;
-    color:#fff;
+    color:#222;
     text-decoration:none;
-    border-bottom:1px solid #1f2937;
+    border-bottom:1px solid #eee;
 }
 
 .sidebar a:hover{
-    background:#1e293b;
+    background:#f5f5f5;
 }
 
-/* زرار X */
+/* زر X */
 .close-btn{
     position:absolute;
     top:15px;
     right:15px;
     font-size:22px;
     cursor:pointer;
-    color:#fff;
+    color:#222;
 }
 
-/* زرار القائمة ☰ */
+/* زر القائمة */
 .menu-btn{
-    position:absolute; /* بدل fixed لو موجود */
+    position:absolute;
     left:10px;
     top:10px;
     font-size:18px;
-    background:#132c44;
-   padding:6px 8px;
+    background:#f2f2f2;
+    padding:6px 8px;
     border-radius:8px;
     cursor:pointer;
+    color:#222;
 }
 
 /* popup */
@@ -241,30 +243,34 @@ text-decoration:none;
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0,0,0,0.5);
     justify-content:center;
     align-items:center;
     z-index:20000;
 }
 
 .popup-content{
-    background:#111827;
+    background:#ffffff;
     padding:20px;
     border-radius:15px;
     width:90%;
     max-width:500px;
+    color:#222;
 }
+
+/* Hero */
 .hero{
     margin:15px;
     padding:30px 20px;
     border-radius:20px;
-    background: linear-gradient(135deg,#0f172a,#1e293b);
+    background:linear-gradient(135deg,#ffffff,#f3f4f6);
     position:relative;
     overflow:hidden;
+    border:1px solid #e5e5e5;
 }
 
 .hero-text small{
-    color:#38bdf8;
+    color:#0099cc;
     font-size:12px;
 }
 
@@ -275,21 +281,22 @@ text-decoration:none;
 }
 
 .hero-text span{
-    color:#00cfff;
+    color:#00a86b;
     font-weight:bold;
 }
 
 .hero-text p{
-    color:#ccc;
+    color:#666;
     font-size:14px;
     line-height:1.6;
 }
+
 .hero::before{
     content:"";
     position:absolute;
     width:200px;
     height:200px;
-    background:#00cfff30;
+    background:#00cfff20;
     border-radius:50%;
     top:-50px;
     left:-50px;
@@ -300,78 +307,47 @@ text-decoration:none;
     position:absolute;
     width:150px;
     height:150px;
-    background:#00ff8850;
+    background:#00ff8820;
     border-radius:50%;
     bottom:-50px;
     right:-50px;
 }
+
+/* صفحة المنتج */
 .product-container{
-display:flex;
-gap:40px;
-align-items:flex-start;
-justify-content:center;
-margin:30px;
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+    padding:20px;
+    flex-wrap:wrap;
 }
 
 .product-image img{
-width:250px;
+    width:260px;
+    border-radius:10px;
 }
 
 .product-info{
-text-align:right;
-max-width:400px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:300px;
 }
 
-#specs ul{
-padding:0;
-list-style:none;
-}
-
-#specs li{
-background:#111827;
-margin:5px 0;
-padding:8px;
-border-radius:8px;
-}
-.product-container{
-display:flex;
-gap:30px;
-align-items:flex-start;
-padding:20px;
-flex-wrap:wrap;
-}
-
-/* الصورة */
-.product-image img{
-width:260px;
-border-radius:10px;
-}
-
-/* المعلومات */
-.product-info{
-display:flex;
-flex-direction:column;
-gap:10px;
-max-width:300px;
-}
-
-/* السعر */
-.price{
-color:#00ff9d;
-font-size:22px;
-}
-
-/* المواصفات */
 #specs{
-margin-top:10px;
+    margin-top:10px;
 }
 
 #specs ul{
-padding:0;
-list-style:none;
+    padding:0;
+    list-style:none;
 }
 
 #specs li{
-margin:5px 0;
-color:#ccc;
+    background:#f5f5f5;
+    margin:5px 0;
+    padding:8px;
+    border-radius:8px;
+    color:#444;
+    border:1px solid #e5e5e5;
 }

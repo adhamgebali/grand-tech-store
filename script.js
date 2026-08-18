@@ -2,45 +2,279 @@ const products = [
 
 /* ================= CPU ================= */
 
-// Intel i3
-{id:1,name:"i3-12100F",price:3000,img:"images/cpu/i3.png",cat:"cpu",
+/* ================= INTEL CORE i3 ================= */
+
+/* ===== 6th Gen ===== */
+{id:301,name:"i3-6100",price:1800,img:"images/cpu/i3.png",cat:"cpu",
+specs:["2 Cores","4 Threads","Up to 3.7GHz","Cache 3MB","LGA1151"]},
+
+/* ===== 7th Gen ===== */
+{id:302,name:"i3-7100",price:1900,img:"images/cpu/i3.png",cat:"cpu",
+specs:["2 Cores","4 Threads","Up to 3.9GHz","Cache 3MB","LGA1151"]},
+
+/* ===== 8th Gen ===== */
+{id:303,name:"i3-8100",price:2200,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.6GHz","Cache 6MB","LGA1151"]},
+
+{id:304,name:"i3-8350K",price:2600,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 4.0GHz","Cache 8MB","Unlocked","LGA1151"]},
+
+/* ===== 9th Gen ===== */
+{id:305,name:"i3-9100F",price:2200,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 4.2GHz","Cache 6MB","LGA1151"]},
+
+{id:306,name:"i3-9100",price:2400,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 4.2GHz","Cache 6MB","LGA1151"]},
+
+/* ===== 10th Gen ===== */
+{id:307,name:"i3-10100F",price:2500,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.3GHz","Cache 6MB","LGA1200"]},
+
+{id:308,name:"i3-10100",price:2800,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.3GHz","Cache 6MB","LGA1200"]},
+
+{id:309,name:"i3-10105F",price:2600,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.4GHz","Cache 6MB","LGA1200"]},
+
+/* ===== 11th Gen ===== */
+/* لا يوجد i3 من الجيل 11 المكتبي */
+
+/* ===== 12th Gen ===== */
+{id:310,name:"i3-12100F",price:3000,img:"images/cpu/i3.png",cat:"cpu",
 specs:["4 Cores","8 Threads","Up to 4.3GHz","Cache 12MB","LGA1700"]},
 
-{id:2,name:"i3-14100",price:3500,img:"images/cpu/i3.png",cat:"cpu",
+{id:311,name:"i3-12100",price:3200,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.3GHz","Cache 12MB","LGA1700"]},
+
+/* ===== 13th Gen ===== */
+{id:312,name:"i3-13100F",price:3500,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.5GHz","Cache 12MB","LGA1700"]},
+
+{id:313,name:"i3-13100",price:3700,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.5GHz","Cache 12MB","LGA1700"]},
+
+/* ===== 14th Gen ===== */
+{id:314,name:"i3-14100",price:3500,img:"images/cpu/i3.png",cat:"cpu",
 specs:["4 Cores","8 Threads","Up to 4.7GHz","Cache 12MB","LGA1700"]},
 
-// Intel i5
-{id:3,name:"i5-12400F",price:6000,img:"images/cpu/i5.png",cat:"cpu",
+{id:315,name:"i3-14100F",price:3400,img:"images/cpu/i3.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.7GHz","Cache 12MB","LGA1700"]},
+
+
+/* ================= INTEL CORE i5 ================= */
+
+/* ===== 6th Gen ===== */
+{id:316,name:"i5-6400",price:2200,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.3GHz","Cache 6MB","LGA1151"]},
+
+{id:317,name:"i5-6500",price:2500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.6GHz","Cache 6MB","LGA1151"]},
+
+{id:318,name:"i5-6600K",price:2800,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.9GHz","Cache 6MB","Unlocked","LGA1151"]},
+
+/* ===== 7th Gen ===== */
+{id:319,name:"i5-7400",price:2500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.5GHz","Cache 6MB","LGA1151"]},
+
+{id:320,name:"i5-7500",price:2800,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 3.8GHz","Cache 6MB","LGA1151"]},
+
+{id:321,name:"i5-7600K",price:3200,img:"images/cpu/i5.png",cat:"cpu",
+specs:["4 Cores","4 Threads","Up to 4.2GHz","Cache 6MB","Unlocked","LGA1151"]},
+
+/* ===== 8th Gen ===== */
+{id:322,name:"i5-8400",price:3000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.0GHz","Cache 9MB","LGA1151"]},
+
+{id:323,name:"i5-8500",price:3300,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.1GHz","Cache 9MB","LGA1151"]},
+
+{id:324,name:"i5-8600K",price:3700,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.3GHz","Cache 9MB","Unlocked","LGA1151"]},
+
+/* ===== 9th Gen ===== */
+{id:325,name:"i5-9400F",price:3000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.1GHz","Cache 9MB","LGA1151"]},
+
+{id:326,name:"i5-9400",price:3200,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.1GHz","Cache 9MB","LGA1151"]},
+
+{id:327,name:"i5-9600K",price:3500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","6 Threads","Up to 4.6GHz","Cache 9MB","Unlocked","LGA1151"]},
+
+/* ===== 10th Gen ===== */
+{id:328,name:"i5-10400F",price:3500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.3GHz","Cache 12MB","LGA1200"]},
+
+{id:329,name:"i5-10400",price:3700,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.3GHz","Cache 12MB","LGA1200"]},
+
+{id:330,name:"i5-10500",price:3900,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.5GHz","Cache 12MB","LGA1200"]},
+
+{id:331,name:"i5-10600K",price:4200,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.8GHz","Cache 12MB","Unlocked","LGA1200"]},
+
+/* ===== 11th Gen ===== */
+{id:332,name:"i5-11400F",price:4000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.4GHz","Cache 12MB","LGA1200"]},
+
+{id:333,name:"i5-11400",price:4200,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.4GHz","Cache 12MB","LGA1200"]},
+
+{id:334,name:"i5-11600K",price:4800,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.9GHz","Cache 12MB","Unlocked","LGA1200"]},
+
+/* ===== 12th Gen ===== */
+{id:335,name:"i5-12400F",price:6000,img:"images/cpu/i5.png",cat:"cpu",
 specs:["6 Cores","12 Threads","Up to 4.4GHz","Cache 18MB","LGA1700"]},
 
-{id:4,name:"i5-12600K",price:8000,img:"images/cpu/i5.png",cat:"cpu",
-specs:["10 Cores","16 Threads","Up to 4.9GHz","Cache 20MB","Unlocked"]},
+{id:336,name:"i5-12400",price:5800,img:"images/cpu/i5.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.4GHz","Cache 18MB","LGA1700"]},
 
-{id:5,name:"i5-13400F",price:6500,img:"images/cpu/i5.png",cat:"cpu",
-specs:["10 Cores","16 Threads","Up to 4.6GHz","Cache 20MB"]},
+{id:337,name:"i5-12600K",price:8000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["10 Cores","16 Threads","Up to 4.9GHz","Cache 20MB","Unlocked","LGA1700"]},
 
-{id:6,name:"i5-13600K",price:9500,img:"images/cpu/i5.png",cat:"cpu",
-specs:["14 Cores","20 Threads","Up to 5.1GHz","Cache 24MB","Unlocked"]},
+/* ===== 13th Gen ===== */
+{id:338,name:"i5-13400F",price:6500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["10 Cores","16 Threads","Up to 4.6GHz","Cache 20MB","LGA1700"]},
 
-{id:7,name:"i5-14600K",price:10000,img:"images/cpu/i5.png",cat:"cpu",
-specs:["14 Cores","20 Threads","Up to 5.3GHz","Cache 24MB"]},
+{id:339,name:"i5-13400",price:6700,img:"images/cpu/i5.png",cat:"cpu",
+specs:["10 Cores","16 Threads","Up to 4.6GHz","Cache 20MB","LGA1700"]},
 
-// Intel i7
-{id:8,name:"i7-12700K",price:9000,img:"images/cpu/i7.png",cat:"cpu",
-specs:["12 Cores","20 Threads","Up to 5.0GHz","Cache 25MB"]},
+{id:340,name:"i5-13600K",price:9500,img:"images/cpu/i5.png",cat:"cpu",
+specs:["14 Cores","20 Threads","Up to 5.1GHz","Cache 24MB","Unlocked","LGA1700"]},
 
-{id:9,name:"i7-13700K",price:11000,img:"images/cpu/i7.png",cat:"cpu",
-specs:["16 Cores","24 Threads","Up to 5.4GHz","Cache 30MB"]},
+/* ===== 14th Gen ===== */
+{id:341,name:"i5-14400",price:7000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["10 Cores","16 Threads","Up to 4.7GHz","Cache 20MB","LGA1700"]},
 
-{id:10,name:"i7-14700K",price:12000,img:"images/cpu/i7.png",cat:"cpu",
-specs:["20 Cores","28 Threads","Up to 5.6GHz","Cache 33MB"]},
+{id:342,name:"i5-14400F",price:6800,img:"images/cpu/i5.png",cat:"cpu",
+specs:["10 Cores","16 Threads","Up to 4.7GHz","Cache 20MB","LGA1700"]},
 
-// Intel i9
-{id:11,name:"i9-13900K",price:13000,img:"images/cpu/i9.png",cat:"cpu",
-specs:["24 Cores","32 Threads","Up to 5.8GHz","Cache 36MB"]},
+{id:343,name:"i5-14600K",price:10000,img:"images/cpu/i5.png",cat:"cpu",
+specs:["14 Cores","20 Threads","Up to 5.3GHz","Cache 24MB","Unlocked","LGA1700"]},
 
-{id:12,name:"i9-14900K",price:15000,img:"images/cpu/i9.png",cat:"cpu",
-specs:["24 Cores","32 Threads","Up to 6.0GHz","Cache 36MB"]},
+
+/* ================= INTEL CORE i7 ================= */
+
+/* ===== 6th Gen ===== */
+{id:344,name:"i7-6700",price:3500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.0GHz","Cache 8MB","LGA1151"]},
+
+{id:345,name:"i7-6700K",price:4000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.2GHz","Cache 8MB","Unlocked","LGA1151"]},
+
+/* ===== 7th Gen ===== */
+{id:346,name:"i7-7700",price:4000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.2GHz","Cache 8MB","LGA1151"]},
+
+{id:347,name:"i7-7700K",price:4500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["4 Cores","8 Threads","Up to 4.5GHz","Cache 8MB","Unlocked","LGA1151"]},
+
+/* ===== 8th Gen ===== */
+{id:348,name:"i7-8700",price:4500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.6GHz","Cache 12MB","LGA1151"]},
+
+{id:349,name:"i7-8700K",price:5000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["6 Cores","12 Threads","Up to 4.7GHz","Cache 12MB","Unlocked","LGA1151"]},
+
+/* ===== 9th Gen ===== */
+{id:350,name:"i7-9700",price:4200,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","8 Threads","Up to 4.7GHz","Cache 12MB","LGA1151"]},
+
+{id:351,name:"i7-9700K",price:4800,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","8 Threads","Up to 4.9GHz","Cache 12MB","Unlocked","LGA1151"]},
+
+/* ===== 10th Gen ===== */
+{id:352,name:"i7-10700",price:5000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 4.8GHz","Cache 16MB","LGA1200"]},
+
+{id:353,name:"i7-10700K",price:5500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.1GHz","Cache 16MB","Unlocked","LGA1200"]},
+
+/* ===== 11th Gen ===== */
+{id:354,name:"i7-11700",price:5500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 4.9GHz","Cache 16MB","LGA1200"]},
+
+{id:355,name:"i7-11700K",price:6000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.0GHz","Cache 16MB","Unlocked","LGA1200"]},
+
+/* ===== 12th Gen ===== */
+{id:356,name:"i7-12700",price:8500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["12 Cores","20 Threads","Up to 4.9GHz","Cache 25MB","LGA1700"]},
+
+{id:357,name:"i7-12700K",price:9000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["12 Cores","20 Threads","Up to 5.0GHz","Cache 25MB","Unlocked","LGA1700"]},
+
+/* ===== 13th Gen ===== */
+{id:358,name:"i7-13700",price:10500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["16 Cores","24 Threads","Up to 5.2GHz","Cache 30MB","LGA1700"]},
+
+{id:359,name:"i7-13700K",price:11000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["16 Cores","24 Threads","Up to 5.4GHz","Cache 30MB","Unlocked","LGA1700"]},
+
+/* ===== 14th Gen ===== */
+{id:360,name:"i7-14700",price:11500,img:"images/cpu/i7.png",cat:"cpu",
+specs:["20 Cores","28 Threads","Up to 5.4GHz","Cache 33MB","LGA1700"]},
+
+{id:361,name:"i7-14700K",price:12000,img:"images/cpu/i7.png",cat:"cpu",
+specs:["20 Cores","28 Threads","Up to 5.6GHz","Cache 33MB","Unlocked","LGA1700"]},
+
+
+/* ================= INTEL CORE i9 ================= */
+
+/* ===== 6th Gen ===== */
+/* لا يوجد i9 في الجيل السادس */
+
+/* ===== 7th Gen ===== */
+/* لا يوجد i9 في الجيل السابع */
+
+/* ===== 8th Gen ===== */
+/* لا يوجد i9 في الجيل الثامن */
+
+/* ===== 9th Gen ===== */
+{id:362,name:"i9-9900",price:5200,img:"images/cpu/i9.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.0GHz","Cache 16MB","LGA1151"]},
+
+{id:363,name:"i9-9900K",price:5500,img:"images/cpu/i9.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.0GHz","Cache 16MB","Unlocked","LGA1151"]},
+
+/* ===== 10th Gen ===== */
+{id:364,name:"i9-10900",price:6500,img:"images/cpu/i9.png",cat:"cpu",
+specs:["10 Cores","20 Threads","Up to 5.2GHz","Cache 20MB","LGA1200"]},
+
+{id:365,name:"i9-10900K",price:7000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["10 Cores","20 Threads","Up to 5.3GHz","Cache 20MB","Unlocked","LGA1200"]},
+
+/* ===== 11th Gen ===== */
+{id:366,name:"i9-11900",price:6800,img:"images/cpu/i9.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.2GHz","Cache 16MB","LGA1200"]},
+
+{id:367,name:"i9-11900K",price:7000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["8 Cores","16 Threads","Up to 5.3GHz","Cache 16MB","Unlocked","LGA1200"]},
+
+/* ===== 12th Gen ===== */
+{id:368,name:"i9-12900",price:11000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["16 Cores","24 Threads","Up to 5.1GHz","Cache 30MB","LGA1700"]},
+
+{id:369,name:"i9-12900K",price:12000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["16 Cores","24 Threads","Up to 5.2GHz","Cache 30MB","Unlocked","LGA1700"]},
+
+/* ===== 13th Gen ===== */
+{id:370,name:"i9-13900",price:12500,img:"images/cpu/i9.png",cat:"cpu",
+specs:["24 Cores","32 Threads","Up to 5.6GHz","Cache 36MB","LGA1700"]},
+
+{id:371,name:"i9-13900K",price:13000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["24 Cores","32 Threads","Up to 5.8GHz","Cache 36MB","Unlocked","LGA1700"]},
+
+/* ===== 14th Gen ===== */
+{id:372,name:"i9-14900",price:14500,img:"images/cpu/i9.png",cat:"cpu",
+specs:["24 Cores","32 Threads","Up to 5.8GHz","Cache 36MB","LGA1700"]},
+
+{id:373,name:"i9-14900K",price:15000,img:"images/cpu/i9.png",cat:"cpu",
+specs:["24 Cores","32 Threads","Up to 6.0GHz","Cache 36MB","Unlocked","LGA1700"]},
 
 // AMD Ryzen
 {id:13,name:"Ryzen 5 3600",price:3500,img:"images/cpu/ryzen5.png",cat:"cpu",
@@ -83,8 +317,8 @@ specs:["16 Cores","3D Cache","AM5"]},
 
 /* ================= GPU ================= */
 
-{ id:120,name:"RX 570",price:3000,img:"images/gpu/rx570.png",cat:"gpu",specs:["4GB","GDDR5"]},
-{ id:121,name:"RX 580",price:3500,img:"images/gpu/rx580.png",cat:"gpu",specs:["8GB","GDDR5"]},
+{ id:120,name:"RX 6500 XT",price:3000,img:"images/gpu/rx570.png",cat:"gpu",specs:["8GB","GDDR6"]},
+{ id:121,name:"RX 9060 XT",price:3500,img:"images/gpu/rx580.png",cat:"gpu",specs:["16GB","GDDR6"]},
 { id:122,name:"RX 5600 XT",price:6000,img:"images/gpu/rx5600.png",cat:"gpu",specs:["6GB","GDDR6"]},
 { id:123,name:"RX 5700 XT",price:7500,img:"images/gpu/rx5700.png",cat:"gpu",specs:["8GB","GDDR6"]},
 { id:101,name:"GTX 960",price:3500,img:"images/gpu/gtx960.png",cat:"gpu",specs:["2GB","GDDR5"]},
@@ -94,38 +328,44 @@ specs:["16 Cores","3D Cache","AM5"]},
 { id:105,name:"GTX 1660",price:9000,img:"images/gpu/gtx1660.png",cat:"gpu",specs:["6GB","GDDR5"]},
 
 { id:106,name:"RTX 3050",price:15000,img:"images/gpu/rtx3050.png",cat:"gpu",specs:["8GB","Ray Tracing"]},
-{ id:107,name:"RTX 3060",price:17000,img:"images/gpu/rtx3060.png",cat:"gpu",specs:["12GB","Ray Tracing"]},
-{ id:108,name:"RTX 3080",price:22000,img:"images/gpu/rtx3080.png",cat:"gpu",specs:["10GB","4K Gaming"]},
+{ id:107,name:"RTX 3060 ti",price:15000,img:"images/gpu/rtx3060.png",cat:"gpu",specs:["12GB","Ray Tracing"]},
+{ id:108,name:"RTX 3080 ti",price:22000,img:"images/gpu/rtx3080.png",cat:"gpu",specs:["10GB","4K Gaming"]},
 { id:109,name:"RTX 4060",price:30000,img:"images/gpu/rtx4060.png",cat:"gpu",specs:["8GB","DLSS3"]},
 { id:110,name:"RTX 4070",price:35000,img:"images/gpu/rtx4070.png",cat:"gpu",specs:["12GB","DLSS3"]},
 { id:111,name:"RTX 4080",price:42000,img:"images/gpu/rtx4080.png",cat:"gpu",specs:["16GB","Ultra"]},
 { id:112,name:"RTX 4090",price:48000,img:"images/gpu/rtx4090.png",cat:"gpu",specs:["24GB","Extreme"]},
+{ id:113,name:"RTX 3070",price:15000,img:"images/gpu/rtx3070.png",cat:"gpu",specs:["8GB","Ray Tracing"]},
+{ id:114,name:"RTX 2060 SUPER",price:10500,img:"images/gpu/rtx2060.png",cat:"gpu",specs:["8GB","Ray Tracing"]},
+
 
 /* ================= RAM ================= */
 
-{ id:200,name:"DDR4 8GB",price:3500,img:"images/ram/ddr4.png",cat:"ram",specs:["8GB","3200MHz"]},
+{ id:200,name:"DDR4 8GB",price:2500,img:"images/ram/ddr4.png",cat:"ram",specs:["8GB","3200MHz"]},
 { id:201,name:"DDR4 16GB",price:6000,img:"images/ram/ddr4.png",cat:"ram",specs:["16GB","3200MHz"]},
 { id:202,name:"DDR5 16GB",price:8000,img:"images/ram/ddr5.png",cat:"ram",specs:["16GB","5600MHz"]},
-{ id:203,name:"DDR5 32GB",price:13000,img:"images/ram/ddr5.png",cat:"ram",specs:["32GB","6000MHz"]},
+{ id:203,name:"DDR5 32GB",price:11000,img:"images/ram/ddr5.png",cat:"ram",specs:["32GB","6000MHz"]},
+{ id:204,name:"DDR4 8GB",price:2000,img:"images/ram/crucial.png",cat:"ram",specs:["8GB","3200MHz"]},
+{ id:203,name:"DDR4 16GB",price:5000,img:"images/ram/crucial.png",cat:"ram",specs:["16GB","3200MHz"]},
 
 /* ================= Motherboard ================= */
 
-{ id:210,name:"B450 Motherboard",price:3000,img:"images/motherboard/b450.png",cat:"motherboard",specs:["AM4","DDR4","PCIe 3.0"]},
+{ id:210,name:"B450 Motherboard",price:3500,img:"images/motherboard/b450.png",cat:"motherboard",specs:["AM4","DDR4","PCIe 3.0"]},
 { id:211,name:"B550 Motherboard",price:4000,img:"images/motherboard/b550.png",cat:"motherboard",specs:["AM4","PCIe 4.0"]},
 { id:212,name:"B650 Motherboard",price:5500,img:"images/motherboard/b650.png",cat:"motherboard",specs:["AM5","DDR5"]},
 { id:213,name:"B760 Motherboard",price:6000,img:"images/motherboard/b760.png",cat:"motherboard",specs:["LGA1700","DDR5"]},
+{ id:214,name:"H610 Motherboard",price:3100,img:"images/motherboard/h610.png",cat:"motherboard",specs:["LGA1700","DDR4"]},
 
 /* ================= PSU ================= */
 
-{ id:220,name:"550W PSU",price:1200,img:"images/psu/psu1.png",cat:"psu",specs:["550W","80+ Bronze"]},
-{ id:221,name:"600W PSU",price:1700,img:"images/psu/psu2.png",cat:"psu",specs:["650W","80+ Bronze"]},
-{ id:222,name:"750W PSU",price:2200,img:"images/psu/psu3.png",cat:"psu",specs:["750W","80+ Gold"]},
+{ id:220,name:"500W PSU",price:900,img:"images/psu/psu1.png",cat:"psu",specs:["500W","80+ Bronze"]},
+{ id:221,name:"600W PSU",price:1200,img:"images/psu/psu2.png",cat:"psu",specs:["600W","80+ Bronze"]},
+{ id:222,name:"700W PSU",price:1500,img:"images/psu/psu3.png",cat:"psu",specs:["700W","80+ Gold"]},
 
 /* ================= Accessories ================= */
 
 { id:230,name:"Gaming Headset",price:800,img:"images/accessories/hs1.png",cat:"accessories",specs:["RGB","Surround"]},
 { id:231,name:"Forev Mechanical Mouse",price:600,img:"images/accessories/mouse.png",cat:"accessories",specs:["Wireless","RGB"]},
-{ id:232,name:"Mechanical Keyboard",price:1200,img:"images/accessories/kb1.png",cat:"accessories",specs:["RGB","Blue Switch"]},
+{ id:232,name:"Mechanical Keyboard REDRAGON",price:1050,img:"images/accessories/kb1.png",cat:"accessories",specs:["RGB","RED Switch"]},
 ];
 
 /* عرض المنتجات */
