@@ -355,6 +355,35 @@ specs:["16 Cores","3D Cache","AM5"]},
 { id:213,name:"B760 Motherboard",price:6000,img:"images/motherboard/b760.png",cat:"motherboard",specs:["LGA1700","DDR5"]},
 { id:214,name:"H610 Motherboard",price:3100,img:"images/motherboard/h610.png",cat:"motherboard",specs:["LGA1700","DDR4"]},
 
+/* ================= DISK / STORAGE ================= */
+
+{id:-4,name:"WD Blue HDD 500GB",price:600,img:"images/disk/disk.500.png",cat:"disk",
+specs:["500GB","SATA","7200RPM"]},
+
+{id:-3,name:"WD Blue HDD 1TB",price:1100,img:"images/disk/disk1T.png",cat:"disk",
+specs:["1TB","SATA","7200RPM"]},
+
+{id:-2,name:"NVMe SSD 128",price:600,img:"images/disk/images.png",cat:"disk",
+specs:["SSD","NVMe","M.2"]},
+
+{id:-5,name:"NVMe SSD 256",price:1200,img:"images/disk/images.png",cat:"disk",
+specs:["SSD","NVMe","M.2"]},
+
+{id:-6,name:"NVMe SSD 512",price:2000,img:"images/disk/images.png",cat:"disk",
+specs:["SSD","NVMe","M.2"]},
+
+{id:-1,name:"SATA SSD 128",price:500,img:"images/disk/sata.png",cat:"disk",
+specs:["SSD","SATA","2.5 Inch"]},
+
+{id:-1,name:"SATA SSD 256",price:900,img:"images/disk/sata.png",cat:"disk",
+specs:["SSD","SATA","2.5 Inch"]},
+
+{id:-1,name:"SATA SSD 500",price:1300,img:"images/disk/sata.png",cat:"disk",
+specs:["SSD","SATA","2.5 Inch"]},
+
+{id:-1,name:"SATA SSD 1T",price:2500,img:"images/disk/sata.png",cat:"disk",
+specs:["SSD","SATA","2.5 Inch"]},
+
 /* ================= PSU ================= */
 
 { id:220,name:"500W PSU",price:900,img:"images/psu/psu1.png",cat:"psu",specs:["500W","80+ Bronze"]},
